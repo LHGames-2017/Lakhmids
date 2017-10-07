@@ -15,10 +15,13 @@
         {
             GameInfo gameInfo = JsonConvert.DeserializeObject<GameInfo>(map);
             var carte = AIHelper.DeserializeMap(gameInfo.CustomSerializedMap);
-            
+
             // INSERT AI CODE HERE.
 
-            string action = AIHelper.CreateMoveAction(gameInfo.Player.Position);
+            //string action = AIHelper.CreateMoveAction(gameInfo.Player.Position);
+            Point point = new point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y);
+            string action = AIHelper.CreateMoveAction(point);
+
             return action;
         }
     }
