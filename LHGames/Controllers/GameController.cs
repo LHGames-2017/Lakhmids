@@ -19,7 +19,7 @@
             // INSERT AI CODE HERE.
 
             //string action = AIHelper.CreateMoveAction(gameInfo.Player.Position);
-            Point point = new point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y);
+            Point point = new point(gameInfo.Player.Position.X, gameInfo.Player.Position.Y-1);
             string action = AIHelper.CreateMoveAction(point);
 
             return action;
